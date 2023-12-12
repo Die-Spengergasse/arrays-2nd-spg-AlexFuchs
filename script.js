@@ -72,10 +72,40 @@ const button_reduce = document.getElementById("button_reduce");
 button_reduce.addEventListener("click", reduce);
 button_reduce.addEventListener("mouseover", reduce_hilfe);
 
+
+const button_swap1 = document.getElementById("button_down1");
+button_down1.addEventListener("click", SWAP1);
+
+const button_swap2 = document.getElementById("button_down2");
+button_down2.addEventListener("click", SWAP2);
+
+const button_swap3 = document.getElementById("button_down3");
+button_down3.addEventListener("click", SWAP3)
+
+
 function hilfelöschen(){
     hilfe("");
     console.log("hilfelöschen");
 }
+
+
+function SWAP1(){
+    const ZSP = input2.value;
+    input2.value = input1.value;
+    input1.value= ZSP.value;
+}
+function SWAP2(){
+    input3.value = input2.value;
+    console.log(input2.value);
+    input2.value= "";
+}
+function SWAP2(){
+    input3.value = input2.value;
+    console.log(input2.value);
+    input2.value= "";
+}
+
+
 
 function push() {
     const i1 = eval(input1.value);
